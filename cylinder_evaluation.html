@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cylinder Object — 3D Evaluation Results</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      font-size: 13pt;
+      margin: 0.75in;
+      color: #111;
+      background: #fff;
+    }
+    h1 {
+      text-align: center;
+      font-size: 18pt;
+      margin-bottom: 4px;
+    }
+    .author {
+      text-align: center;
+      font-size: 12pt;
+      color: #444;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 14pt;
+      margin-top: 28px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .caption {
+      text-align: center;
+      font-size: 11pt;
+      color: #444;
+      margin-bottom: 12px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    th, td {
+      border-top: 2px solid #333;
+      border-bottom: 1px solid #aaa;
+      padding: 10px 14px;
+      vertical-align: middle;
+    }
+    thead th {
+      border-bottom: 2px solid #333;
+      background: #f5f5f5;
+      font-weight: bold;
+      text-align: left;
+    }
+    tbody tr:last-child td {
+      border-bottom: 2px solid #333;
+    }
+    tbody tr td:first-child {
+      font-weight: bold;
+      white-space: nowrap;
+      width: 14%;
+    }
+    tbody tr td:nth-child(2) {
+      width: 30%;
+    }
+    tbody tr td:nth-child(3) {
+      text-align: center;
+      width: 56%;
+    }
+    .metrics {
+      line-height: 1.8;
+    }
+    .metrics .label {
+      font-weight: bold;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .summary {
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+    @media print {
+      body { margin: 0.5in; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cylinder Object &mdash; 3D Evaluation Results</h1>
+  <div class="author">PRO-Bench3D</div>
+
+  <h2>Cylinder: Three-Stage Alignment Evaluation</h2>
+
+  <p>
+    The table below summarizes the three alignment stages for the <strong>Cylinder</strong> object,
+    showing the corresponding point-cloud visualizations and Chamfer Distance (CD) metrics
+    at each stage.
+  </p>
+
+  <div class="caption"><strong>Table 1:</strong> Three-stage alignment results for the Cylinder object.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Scale</span><br>
+            (RMS radius normalization)<br>
+            CD = 1.27185<br>
+            pred&rarr;GT: 1.27185<br>
+            GT&rarr;pred: 1.27185
+          </div>
+        </td>
+        <td>
+          <img src="Object/prescale_visualize.png" alt="Pre-Scale Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            (Discrete rotation search)<br>
+            CD = 0.00003<br>
+            pred&rarr;GT: 0.00003<br>
+            GT&rarr;pred: 0.00003
+          </div>
+        </td>
+        <td>
+          <img src="Object/rotation_seed_visualize.png" alt="Rotation Seed Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Sim(3) ICP</span><br>
+            (Fine alignment + scale fit)<br>
+            CD = 0.00000<br>
+            RMSD = 0.00000<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <img src="Object/icp_diagnostics_visualize.png" alt="ICP Diagnostics Visualization">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="summary">
+    <strong>Summary:</strong> The Cylinder object starts with a large CD of 1.27185 at the
+    pre-scale stage (Step 1), which drops dramatically to 0.00003 after best rotation seed
+    alignment (Steps 2+3), and reaches near-perfect alignment (CD = 0.00000) after
+    Multi-start Sim(3) ICP refinement (Steps 4+5).
+  </p>
+
+</body>
+</html>
