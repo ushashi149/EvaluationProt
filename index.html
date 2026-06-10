@@ -212,6 +212,66 @@
     </tbody>
   </table>
 
+  <div class="caption"><strong>Table 3:</strong> Three-stage alignment results for the Ground Truth Protein.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Scale</span><br>
+            (RMS radius normalization)<br>
+            CD = 81.24204<br>
+            pred&rarr;GT: 87.12788<br>
+            GT&rarr;pred: 75.35621
+          </div>
+        </td>
+        <td>
+          <img src="Object/Groundtruth_scale0.14x_rot132y_prescale_visualize.png" alt="GT Protein Pre-Scale Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            (Discrete rotation search)<br>
+            CD = 0.00169<br>
+            pred&rarr;GT: 0.00169<br>
+            GT&rarr;pred: 0.00169
+          </div>
+        </td>
+        <td>
+          <img src="Object/Groundtruth_scale0.14x_rot132y_rotation_seed_visualize.png" alt="GT Protein Rotation Seed Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Sim(3) ICP</span><br>
+            (Fine alignment + scale fit)<br>
+            CD = 0.00001<br>
+            RMSD = 0.00001<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <img src="Object/Groundtruth_scale0.14x_rot132y_icp_diagnostics_visualize.png" alt="GT Protein ICP Diagnostics Visualization">
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
