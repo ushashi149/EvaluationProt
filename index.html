@@ -212,6 +212,43 @@
     </tbody>
   </table>
 
+  <div class="caption"><strong>Table 3:</strong> Ground Truth Protein mesh preparation.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Parameters</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;">Step A:<br>Rescale</td>
+        <td style="border-bottom:none;">
+          <div class="metrics">
+            <span class="label">Uniform Scale Reduction</span><br>
+            (Applied to ground-truth protein mesh)<br>
+            Scale Factor: 0.14&times;
+          </div>
+        </td>
+        <td rowspan="2" style="vertical-align:middle;">
+          <img src="Object/png/screenshot_prot_gt_prep.png" alt="GT Protein Preparation Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Step B:<br>Rotate</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Axis-Aligned Rotation</span><br>
+            (Applied to rescaled mesh)<br>
+            Angle: 132&deg; about Y-axis
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
   <div class="caption"><strong>Table 4:</strong> Three-stage alignment results for the Ground Truth Protein.</div>
 
   <table>
