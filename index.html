@@ -418,9 +418,9 @@
     </tbody>
   </table>
 
-  <p style="font-weight: bold; font-size: 15pt; margin-top: 36px; margin-bottom: 8px;">Modified</p>
+  <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
-  <div class="caption"><strong>Table 7:</strong> Three-stage alignment results (Modified — pdb6yvu).</div>
+  <div class="caption"><strong>Table 7:</strong> Three-stage alignment results (pdb6yvu Profusion).</div>
 
   <table>
     <thead>
@@ -435,15 +435,19 @@
         <td>Step 1:<br>Pre-Scale</td>
         <td>
           <div class="metrics">
-            <span class="label">Rotation-invariant Scale</span><br>
-            (RMS radius normalization)<br>
+            <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
+            Uniform scale: s = GT_RMS_radius / pred_RMS_radius<br>
+            No rotation or ICP applied at this stage.<br>
             CD = 0.22795<br>
             pred&rarr;GT: 0.24114<br>
             GT&rarr;pred: 0.21476
           </div>
         </td>
         <td>
-          <img src="Object/pdb6yvu_prescale_visualize.png" alt="Pre-Scale Visualization">
+          <div class="viz-pair">
+            <img src="Object/pdb6yvu_prescale_visualize.png" alt="Pre-Scale Point-Cloud Visualization">
+            <img src="Object/png/screenshot_jd_prescale.png" alt="Pre-Scale 3D Screenshot">
+          </div>
         </td>
       </tr>
       <tr>
@@ -451,22 +455,28 @@
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
-            (Discrete rotation search)<br>
+            Candidate pool: 24 PCA-axis + 432 axial + 2000 random SO(3)<br>
+            Top-16 seeds screened by bidirectional Chamfer (10k downsample)<br>
+            Transform: R_best @ (v &minus; pred_centroid) + gt_centroid<br>
             CD = 0.03087<br>
             pred&rarr;GT: 0.03431<br>
             GT&rarr;pred: 0.02742
           </div>
         </td>
         <td>
-          <img src="Object/pdb6yvu_rotation_seed_visualize.png" alt="Rotation Seed Visualization">
+          <div class="viz-pair">
+            <img src="Object/pdb6yvu_rotation_seed_visualize.png" alt="Rotation Seed Point-Cloud Visualization">
+            <img src="Object/png/screenshot_jd_rotation.png" alt="Rotation Seed 3D Screenshot">
+          </div>
         </td>
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
         <td>
           <div class="metrics">
-            <span class="label">Multi-start Sim(3) ICP</span><br>
-            (Fine alignment + scale fit)<br>
+            <span class="label">Multi-start Rigid ICP (R + t, scale fixed)</span><br>
+            16 seeds, max 200 iterations, 85th-percentile inlier trimming<br>
+            Winner by symmetric Chamfer on full-resolution cloud<br>
             CD = 0.02628<br>
             RMSD = 0.03706<br>
             Scale = 1.00000<br>
@@ -475,7 +485,10 @@
           </div>
         </td>
         <td>
-          <img src="Object/pdb6yvu_icp_diagnostics_visualize.png" alt="ICP Diagnostics Visualization">
+          <div class="viz-pair">
+            <img src="Object/pdb6yvu_icp_diagnostics_visualize.png" alt="ICP Point-Cloud Visualization">
+            <img src="Object/png/screenshot_jd_icp.png" alt="ICP 3D Screenshot">
+          </div>
         </td>
       </tr>
     </tbody>
