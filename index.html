@@ -453,8 +453,6 @@
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
-            Candidate pool: 24 PCA-axis + 432 axial + 2000 random SO(3)<br>
-            Top-16 seeds screened by bidirectional Chamfer (10k downsample)<br>
             <span style="color: #c0392b; font-weight: bold;">CD = 0.9814 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 1.0907 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 0.8717 nm</span>
@@ -471,9 +469,7 @@
         <td>Steps 4+5:<br>ICP Refinement</td>
         <td>
           <div class="metrics">
-            <span class="label">Multi-start Rigid ICP (R + t, scale fixed)</span><br>
-            16 seeds, max 200 iterations, 85th-percentile inlier trimming<br>
-            Winner by symmetric Chamfer on full-resolution cloud<br>
+            <span class="label">Multi-start Rigid ICP</span><br>
             <span style="color: #c0392b; font-weight: bold;">CD = 0.8354 nm</span><br>
             RMSD = 0.03706<br>
             Scale = 1.00000<br>
