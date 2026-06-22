@@ -487,5 +487,74 @@
     </tbody>
   </table>
 
+  <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
+
+  <div class="caption"><strong>Table 8:</strong> Three-stage alignment results (pdb6yvu MVSAM3D).</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 6.4340 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 5.6593 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 7.2087 nm</span>
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/mvsam3d_prescale_visualize.png" alt="MVSAM3D Pre-Scale Point-Cloud Visualization">
+            <img src="Object/png/screenshot_mvsam3d_prescale.png" alt="MVSAM3D Pre-Scale 3D Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 0.7588 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 0.7626 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 0.7550 nm</span>
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/mvsam3d_rotation_seed_visualize.png" alt="MVSAM3D Rotation Seed Point-Cloud Visualization">
+            <img src="Object/png/screenshot_mvsam3d_rotation.png" alt="MVSAM3D Rotation Seed 3D Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Rigid ICP</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 0.7089 nm</span><br>
+            RMSD = 0.02904<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/mvsam3d_icp_diagnostics_visualize.png" alt="MVSAM3D ICP Point-Cloud Visualization">
+            <img src="Object/png/screenshot_mvsam3d_icp.png" alt="MVSAM3D ICP 3D Screenshot">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
