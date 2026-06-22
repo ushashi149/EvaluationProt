@@ -436,8 +436,6 @@
         <td>
           <div class="metrics">
             <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
-            Uniform scale: s = GT_RMS_radius / pred_RMS_radius<br>
-            No rotation or ICP applied at this stage.<br>
             <span style="color: #c0392b; font-weight: bold;">CD = 7.2465 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 7.6658 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 6.8272 nm</span>
@@ -457,7 +455,6 @@
             <span class="label">Best Rotation Seed Applied</span><br>
             Candidate pool: 24 PCA-axis + 432 axial + 2000 random SO(3)<br>
             Top-16 seeds screened by bidirectional Chamfer (10k downsample)<br>
-            Transform: R_best @ (v &minus; pred_centroid) + gt_centroid<br>
             <span style="color: #c0392b; font-weight: bold;">CD = 0.9814 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 1.0907 nm</span><br>
             <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 0.8717 nm</span>
