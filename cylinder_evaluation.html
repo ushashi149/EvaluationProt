@@ -34,9 +34,12 @@
     }
     .caption {
       text-align: center;
-      font-size: 11pt;
-      color: #444;
+      font-size: 15pt;
+      font-weight: bold;
+      color: #1a6eb5;
       margin-bottom: 12px;
+      margin-top: 28px;
+      letter-spacing: 0.3px;
     }
     table {
       border-collapse: collapse;
@@ -70,6 +73,16 @@
       text-align: center;
       width: 56%;
     }
+    .viz-pair {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .viz-pair img {
+      width: 48%;
+      height: auto;
+    }
     .metrics {
       line-height: 1.8;
     }
@@ -95,18 +108,44 @@
 </head>
 <body>
 
-  <h1>Cylinder Object &mdash; 3D Evaluation Results</h1>
-  <div class="author">PRO-Bench3D</div>
+  <div class="caption"><strong>Table 1:</strong> Predicted mesh preparation for the Cylinder object.</div>
 
-  <h2>Cylinder: Three-Stage Alignment Evaluation</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Parameters</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;">Step A:<br>Rescale</td>
+        <td style="border-bottom:none;">
+          <div class="metrics">
+            <span class="label">Uniform Scale Reduction</span><br>
+            (Applied to predicted mesh)<br>
+            Scale Factor: 0.14&times;
+          </div>
+        </td>
+        <td rowspan="2" style="vertical-align:middle;">
+          <img src="Object/png/screenshot_gt_prep.png" alt="Predicted Preparation Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Step B:<br>Rotate</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Axis-Aligned Rotation</span><br>
+            (Applied to rescaled mesh)<br>
+            Angle: 132&deg; about Y-axis
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <p>
-    The table below summarizes the three alignment stages for the <strong>Cylinder</strong> object,
-    showing the corresponding point-cloud visualizations and Chamfer Distance (CD) metrics
-    at each stage.
-  </p>
-
-  <div class="caption"><strong>Table 1:</strong> Three-stage alignment results for the Cylinder object.</div>
+  <div class="caption"><strong>Table 2:</strong> Three-stage alignment results for the Cylinder object.</div>
 
   <table>
     <thead>
@@ -129,7 +168,10 @@
           </div>
         </td>
         <td>
-          <img src="Object/prescale_visualize.png" alt="Pre-Scale Visualization">
+          <div class="viz-pair">
+            <img src="Object/prescale_visualize.png" alt="Pre-Scale Visualization">
+            <img src="Object/png/screenshot_prescale.png" alt="Pre-Scale Screenshot">
+          </div>
         </td>
       </tr>
       <tr>
@@ -144,7 +186,10 @@
           </div>
         </td>
         <td>
-          <img src="Object/rotation_seed_visualize.png" alt="Rotation Seed Visualization">
+          <div class="viz-pair">
+            <img src="Object/rotation_seed_visualize.png" alt="Rotation Seed Visualization">
+            <img src="Object/png/screenshot_rotation.png" alt="Rotation Seed Screenshot">
+          </div>
         </td>
       </tr>
       <tr>
@@ -161,18 +206,280 @@
           </div>
         </td>
         <td>
-          <img src="Object/icp_diagnostics_visualize.png" alt="ICP Diagnostics Visualization">
+          <div class="viz-pair">
+            <img src="Object/icp_diagnostics_visualize.png" alt="ICP Diagnostics Visualization">
+            <img src="Object/png/screenshot_icp.png" alt="ICP Screenshot">
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
 
-  <p class="summary">
-    <strong>Summary:</strong> The Cylinder object starts with a large CD of 1.27185 at the
-    pre-scale stage (Step 1), which drops dramatically to 0.00003 after best rotation seed
-    alignment (Steps 2+3), and reaches near-perfect alignment (CD = 0.00000) after
-    Multi-start Sim(3) ICP refinement (Steps 4+5).
-  </p>
+  <div class="caption"><strong>Table 3:</strong> Ground Truth Protein mesh preparation.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Parameters</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;">Step A:<br>Rescale</td>
+        <td style="border-bottom:none;">
+          <div class="metrics">
+            <span class="label">Uniform Scale Reduction</span><br>
+            (Applied to ground-truth protein mesh)<br>
+            Scale Factor: 0.14&times;
+          </div>
+        </td>
+        <td rowspan="2" style="vertical-align:middle;">
+          <img src="Object/png/screenshot_prot_gt_prep.png" alt="GT Protein Preparation Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Step B:<br>Rotate</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Axis-Aligned Rotation</span><br>
+            (Applied to rescaled mesh)<br>
+            Angle: 132&deg; about Y-axis
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="caption"><strong>Table 4:</strong> Three-stage alignment results for the Ground Truth Protein.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Scale</span><br>
+            (RMS radius normalization)<br>
+            CD = 81.24204<br>
+            pred&rarr;GT: 87.12788<br>
+            GT&rarr;pred: 75.35621
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/Groundtruth_scale0.14x_rot132y_prescale_visualize.png" alt="GT Protein Pre-Scale Visualization">
+            <img src="Object/png/screenshot_prot_prescale.png" alt="GT Protein Pre-Scale Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            (Discrete rotation search)<br>
+            CD = 0.00169<br>
+            pred&rarr;GT: 0.00169<br>
+            GT&rarr;pred: 0.00169
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/Groundtruth_scale0.14x_rot132y_rotation_seed_visualize.png" alt="GT Protein Rotation Seed Visualization">
+            <img src="Object/png/screenshot_prot_rotation.png" alt="GT Protein Rotation Seed Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Sim(3) ICP</span><br>
+            (Fine alignment + scale fit)<br>
+            CD = 0.00001<br>
+            RMSD = 0.00001<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/Groundtruth_scale0.14x_rot132y_icp_diagnostics_visualize.png" alt="GT Protein ICP Diagnostics Visualization">
+            <img src="Object/png/screenshot_prot_icp.png" alt="GT Protein ICP Screenshot">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="caption"><strong>Table 5:</strong> Predicted mesh from MV-SAM3D.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Description</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MV-SAM3D<br>Predicted Mesh</td>
+        <td>
+          <div class="metrics">
+            <span class="label">MV-SAM3D Predicted Mesh</span><br>
+            (Obtained from MV-SAM3D reconstruction)
+          </div>
+        </td>
+        <td>
+          <img src="Object/png/screenshot_mvsam3d_pred.png" alt="MV-SAM3D Predicted Mesh Visualization">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="caption"><strong>Table 6:</strong> Three-stage alignment results for the Predicted Protein.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Scale</span><br>
+            (RMS radius normalization)<br>
+            CD = 66.42782<br>
+            pred&rarr;GT: 63.77830<br>
+            GT&rarr;pred: 69.07733
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/result_prescale_visualize.png" alt="Predicted Protein Pre-Scale Visualization">
+            <img src="Object/png/screenshot_predprot_prescale.png" alt="Predicted Protein Pre-Scale Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            (Discrete rotation search)<br>
+            CD = 7.58828<br>
+            pred&rarr;GT: 7.62697<br>
+            GT&rarr;pred: 7.54959
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/result_prescaled_rotation_seed_visualize.png" alt="Predicted Protein Rotation Seed Visualization">
+            <img src="Object/png/screenshot_predprot_rotation.png" alt="Predicted Protein Rotation Seed Screenshot">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Sim(3) ICP</span><br>
+            (Fine alignment + scale fit)<br>
+            CD = 7.86825<br>
+            RMSD = 7.57319<br>
+            Scale = 0.85631<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <div class="viz-pair">
+            <img src="Object/result_prescaled_icp_diagnostics_visualize.png" alt="Predicted Protein ICP Diagnostics Visualization">
+            <img src="Object/png/screenshot_predprot_icp.png" alt="Predicted Protein ICP Screenshot">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-weight: bold; font-size: 15pt; margin-top: 36px; margin-bottom: 8px;">Modified</p>
+
+  <div class="caption"><strong>Table 7:</strong> Three-stage alignment results (Modified — pdb6yvu).</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Scale</span><br>
+            (RMS radius normalization)<br>
+            CD = 0.22795<br>
+            pred&rarr;GT: 0.24114<br>
+            GT&rarr;pred: 0.21476
+          </div>
+        </td>
+        <td>
+          <img src="Object/pdb6yvu_prescale_visualize.png" alt="Pre-Scale Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            (Discrete rotation search)<br>
+            CD = 0.03087<br>
+            pred&rarr;GT: 0.03431<br>
+            GT&rarr;pred: 0.02742
+          </div>
+        </td>
+        <td>
+          <img src="Object/pdb6yvu_rotation_seed_visualize.png" alt="Rotation Seed Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Sim(3) ICP</span><br>
+            (Fine alignment + scale fit)<br>
+            CD = 0.02628<br>
+            RMSD = 0.03706<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <img src="Object/pdb6yvu_icp_diagnostics_visualize.png" alt="ICP Diagnostics Visualization">
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
