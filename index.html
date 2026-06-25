@@ -650,5 +650,65 @@
     </tbody>
   </table>
 
+  <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
+
+  <div class="caption"><strong>Table 11:</strong> Three-stage alignment results (pdb6yvu WRCmvsam3).</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
+        <th>Visualization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Step 1:<br>Pre-Scale</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 1.7860 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 2.0083 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 1.5636 nm</span>
+          </div>
+        </td>
+        <td>
+          <img src="Object/WRCmvsam3_prescale_visualize.png" alt="WRCmvsam3 Pre-Scale Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 2+3:<br>Rotation Seed</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Best Rotation Seed Applied</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 0.7192 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">pred&rarr;GT: 0.7365 nm</span><br>
+            <span style="color: #c0392b; font-weight: bold;">GT&rarr;pred: 0.7021 nm</span>
+          </div>
+        </td>
+        <td>
+          <img src="Object/WRCmvsam3_rotation_seed_visualize.png" alt="WRCmvsam3 Rotation Seed Visualization">
+        </td>
+      </tr>
+      <tr>
+        <td>Steps 4+5:<br>ICP Refinement</td>
+        <td>
+          <div class="metrics">
+            <span class="label">Multi-start Rigid ICP</span><br>
+            <span style="color: #c0392b; font-weight: bold;">CD = 0.6707 nm</span><br>
+            RMSD = 1.0045<br>
+            Scale = 1.00000<br>
+            Inlier = 0.850<br>
+            Chirality = OK
+          </div>
+        </td>
+        <td>
+          <img src="Object/WRCmvsam3_ps_icp_diagnostics_visualize.png" alt="WRCmvsam3 ICP Diagnostics Visualization">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
