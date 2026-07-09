@@ -101,6 +101,17 @@
       margin-top: 20px;
       line-height: 1.7;
     }
+    #table13-wrapper td:first-child {
+      width: 1px;
+      white-space: nowrap;
+    }
+    #table13-wrapper td:nth-child(2) {
+      width: 200px;
+    }
+    #table13-wrapper td:nth-child(3) {
+      width: 130px;
+      text-align: center;
+    }
     @media print {
       body { margin: 0.5in; }
     }
@@ -829,17 +840,17 @@
 
   <div class="caption"><strong>Table 13:</strong> Three-stage alignment results (EIN-HPr-mvsam3).</div>
 
-  <div style="overflow-x: auto;">
+  <div id="table13-wrapper" style="overflow-x: auto;">
   <table style="width: max-content; table-layout: auto;">
     <thead>
       <tr>
-        <th style="white-space: nowrap;">Step</th>
-        <th style="color: #c0392b; font-weight: bold; font-size: 15pt; min-width: 220px;">Description &amp; Metrics</th>
+        <th>Step</th>
+        <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
-        <th style="min-width: 300px;">Visualization</th>
-        <th style="text-align: center; min-width: 420px;">Side View</th>
-        <th style="text-align: center; min-width: 420px;">Bottom View</th>
-        <th style="text-align: center; min-width: 420px;">Top View</th>
+        <th>Visualization</th>
+        <th style="text-align: center;">Side View</th>
+        <th style="text-align: center;">Bottom View</th>
+        <th style="text-align: center;">Top View</th>
       </tr>
     </thead>
     <tbody>
