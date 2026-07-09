@@ -101,6 +101,17 @@
       margin-top: 20px;
       line-height: 1.7;
     }
+    #table12-wrapper td:first-child {
+      width: 1px;
+      white-space: nowrap;
+    }
+    #table12-wrapper td:nth-child(2) {
+      width: 200px;
+    }
+    #table12-wrapper td:nth-child(3) {
+      width: 130px;
+      text-align: center;
+    }
     #table13-wrapper td:first-child {
       width: 1px;
       white-space: nowrap;
@@ -756,7 +767,8 @@
 
   <div class="caption"><strong>Table 12:</strong> Three-stage alignment results (CasB_E-mvsam3).</div>
 
-  <table>
+  <div id="table12-wrapper" style="overflow-x: auto;">
+  <table style="width: max-content; table-layout: auto;">
     <thead>
       <tr>
         <th>Step</th>
@@ -783,11 +795,18 @@
           CD = 0.5995 nm
         </td>
         <td>
-          <img src="Object/casbe_prescale_visualize.png" alt="CasB_E Pre-Scale Visualization">
+          <img src="Object/casbe_prescale_visualize.png" alt="CasB_E Pre-Scale Visualization" style="width:400px; height:auto;">
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.37.16%20PM.png" alt="Step 1 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.37.23%20PM.png" alt="Step 1 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.38.20%20PM.png" alt="Step 1 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.38.26%20PM.png" alt="Step 1 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
@@ -803,11 +822,18 @@
           CD = 0.5995 nm
         </td>
         <td>
-          <img src="Object/casbe_rotation_seed_visualize.png" alt="CasB_E Rotation Seed Visualization">
+          <img src="Object/casbe_rotation_seed_visualize.png" alt="CasB_E Rotation Seed Visualization" style="width:400px; height:auto;">
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.38.41%20PM.png" alt="Steps 2+3 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.38.48%20PM.png" alt="Steps 2+3 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.39.09%20PM.png" alt="Steps 2+3 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.39.14%20PM.png" alt="Steps 2+3 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
@@ -827,14 +853,22 @@
           CD = 0.5995 nm
         </td>
         <td>
-          <img src="Object/casbe_icp_diagnostics_visualize.png" alt="CasB_E ICP Diagnostics Visualization">
+          <img src="Object/casbe_icp_diagnostics_visualize.png" alt="CasB_E ICP Diagnostics Visualization" style="width:400px; height:auto;">
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.41.15%20PM.png" alt="Steps 4+5 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.41.28%20PM.png" alt="Steps 4+5 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.41.19%20PM.png" alt="Steps 4+5 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.41.24%20PM.png" alt="Steps 4+5 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
