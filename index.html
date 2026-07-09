@@ -109,17 +109,20 @@
     }
     #table11-wrapper td:nth-child(2),
     #table12-wrapper td:nth-child(2),
-    #table13-wrapper td:nth-child(2) {
-      text-align: center;
-    }
+    #table13-wrapper td:nth-child(2),
     #table11-wrapper td:nth-child(3),
     #table12-wrapper td:nth-child(3),
     #table13-wrapper td:nth-child(3) {
-      width: 200px;
+      text-align: center;
     }
     #table11-wrapper td:nth-child(4),
     #table12-wrapper td:nth-child(4),
     #table13-wrapper td:nth-child(4) {
+      width: 200px;
+    }
+    #table11-wrapper td:nth-child(5),
+    #table12-wrapper td:nth-child(5),
+    #table13-wrapper td:nth-child(5) {
       width: 130px;
       text-align: center;
     }
@@ -448,6 +451,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th>Visualization</th>
@@ -543,6 +547,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th>Visualization</th>
@@ -613,6 +618,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th>Visualization</th>
@@ -684,6 +690,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
@@ -697,6 +704,7 @@
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
         <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
@@ -709,10 +717,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <div class="viz-pair">
-            <img src="Object/WRCmvsam3_prescale_visualize.png" alt="WRCmvsam3 Pre-Scale Visualization">
-            <img src="Object/png/screenshot_wrcmvsam3_prescale.png" alt="WRCmvsam3 Pre-Scale Screenshot">
-          </div>
+          <img src="Object/WRCmvsam3_prescale_visualize.png" alt="WRCmvsam3 Pre-Scale Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.45.39%20PM.png" alt="Step 1 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -728,6 +733,7 @@
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
         <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -740,10 +746,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <div class="viz-pair">
-            <img src="Object/WRCmvsam3_rotation_seed_visualize.png" alt="WRCmvsam3 Rotation Seed Visualization">
-            <img src="Object/png/screenshot_wrcmvsam3_rotation.png" alt="WRCmvsam3 Rotation Seed Screenshot">
-          </div>
+          <img src="Object/WRCmvsam3_rotation_seed_visualize.png" alt="WRCmvsam3 Rotation Seed Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.20%20PM.png" alt="Steps 2+3 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -759,6 +762,7 @@
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
         <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Multi-start Rigid ICP</span><br>
@@ -773,10 +777,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <div class="viz-pair">
-            <img src="Object/WRCmvsam3_ps_icp_diagnostics_visualize.png" alt="WRCmvsam3 ICP Diagnostics Visualization">
-            <img src="Object/png/screenshot_wrcmvsam3_icp.png" alt="WRCmvsam3 ICP Screenshot">
-          </div>
+          <img src="Object/WRCmvsam3_ps_icp_diagnostics_visualize.png" alt="WRCmvsam3 ICP Diagnostics Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.58%20PM.png" alt="Steps 4+5 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -802,6 +803,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
@@ -814,6 +816,7 @@
     <tbody>
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
+        <td style="text-align: center;"></td>
         <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
@@ -843,6 +846,7 @@
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
         <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -870,6 +874,7 @@
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
+        <td style="text-align: center;"></td>
         <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
@@ -913,6 +918,7 @@
     <thead>
       <tr>
         <th>Step</th>
+        <th style="text-align: center;">Ground Truth</th>
         <th style="text-align: center;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
@@ -925,6 +931,7 @@
     <tbody>
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
+        <td style="text-align: center;"></td>
         <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
@@ -954,6 +961,7 @@
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
         <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -981,6 +989,7 @@
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
+        <td style="text-align: center;"></td>
         <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
