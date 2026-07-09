@@ -101,6 +101,17 @@
       margin-top: 20px;
       line-height: 1.7;
     }
+    #table11-wrapper td:first-child {
+      width: 1px;
+      white-space: nowrap;
+    }
+    #table11-wrapper td:nth-child(2) {
+      width: 200px;
+    }
+    #table11-wrapper td:nth-child(3) {
+      width: 130px;
+      text-align: center;
+    }
     #table12-wrapper td:first-child {
       width: 1px;
       white-space: nowrap;
@@ -676,7 +687,8 @@
 
   <div class="caption"><strong>Table 11:</strong> Three-stage alignment results (WRC-mvsam3).</div>
 
-  <table>
+  <div id="table11-wrapper" style="overflow-x: auto;">
+  <table style="width: max-content; table-layout: auto;">
     <thead>
       <tr>
         <th>Step</th>
@@ -708,9 +720,16 @@
             <img src="Object/png/screenshot_wrcmvsam3_prescale.png" alt="WRCmvsam3 Pre-Scale Screenshot">
           </div>
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.45.39%20PM.png" alt="Step 1 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.45.54%20PM.png" alt="Step 1 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.46.00%20PM.png" alt="Step 1 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.46.06%20PM.png" alt="Step 1 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
@@ -731,9 +750,16 @@
             <img src="Object/png/screenshot_wrcmvsam3_rotation.png" alt="WRCmvsam3 Rotation Seed Screenshot">
           </div>
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.20%20PM.png" alt="Steps 2+3 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.24%20PM.png" alt="Steps 2+3 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.30%20PM.png" alt="Steps 2+3 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.35%20PM.png" alt="Steps 2+3 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
@@ -756,12 +782,20 @@
             <img src="Object/png/screenshot_wrcmvsam3_icp.png" alt="WRCmvsam3 ICP Screenshot">
           </div>
         </td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.58%20PM.png" alt="Steps 4+5 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.48.03%20PM.png" alt="Steps 4+5 Side View 2" style="width:400px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.48.08%20PM.png" alt="Steps 4+5 Bottom View" style="width:400px; height:auto;">
+        </td>
+        <td style="text-align: center;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.48.14%20PM.png" alt="Steps 4+5 Top View" style="width:400px; height:auto;">
+        </td>
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
