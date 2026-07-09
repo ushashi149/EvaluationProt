@@ -114,6 +114,8 @@
     #table12-wrapper td:nth-child(3),
     #table13-wrapper td:nth-child(3) {
       text-align: center;
+      width: 180px;
+      max-width: 180px;
     }
     #table11-wrapper td:nth-child(4),
     #table12-wrapper td:nth-child(4),
@@ -637,8 +639,8 @@
         </td>
         <td>
           <div class="viz-pair">
-            <img src="Object/WRAC_prescale_visualize.png" alt="WRAC Pre-Scale Visualization">
-            <img src="Object/png/screenshot_wrac_prescale.png" alt="WRAC Pre-Scale Screenshot">
+            <img src="Code/JD/output/WRAC_prescale_visualize.png" alt="WRAC Pre-Scale Visualization">
+            <img src="Code/JD/output/png/screenshot_wrac_prescale.png" alt="WRAC Pre-Scale Screenshot">
           </div>
         </td>
       </tr>
@@ -654,8 +656,8 @@
         </td>
         <td>
           <div class="viz-pair">
-            <img src="Object/WRAC_rotation_seed_visualize.png" alt="WRAC Rotation Seed Visualization">
-            <img src="Object/png/screenshot_wrac_rotation.png" alt="WRAC Rotation Seed Screenshot">
+            <img src="Code/JD/output/WRAC_rotation_seed_visualize.png" alt="WRAC Rotation Seed Visualization">
+            <img src="Code/JD/output/png/screenshot_wrac_rotation.png" alt="WRAC Rotation Seed Screenshot">
           </div>
         </td>
       </tr>
@@ -673,8 +675,8 @@
         </td>
         <td>
           <div class="viz-pair">
-            <img src="Object/WRAC_ps_icp_diagnostics_visualize.png" alt="WRAC ICP Diagnostics Visualization">
-            <img src="Object/png/screenshot_wrac_icp.png" alt="WRAC ICP Screenshot">
+            <img src="Code/JD/output/WRAC_ps_icp_diagnostics_visualize.png" alt="WRAC ICP Diagnostics Visualization">
+            <img src="Code/JD/output/png/screenshot_wrac_icp.png" alt="WRAC ICP Screenshot">
           </div>
         </td>
       </tr>
@@ -683,15 +685,15 @@
 
   <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
-  <div class="caption"><strong>Table 11:</strong> Three-stage alignment results (WRC-mvsam3).</div>
+  <div class="caption"><strong>Table 11:</strong> Three-stage alignment results (pdb6yvu WRCmvsam3).</div>
 
   <div id="table11-wrapper" style="overflow-x: auto;">
   <table style="width: max-content; table-layout: auto;">
     <thead>
       <tr>
         <th>Step</th>
-        <th style="text-align: center;">Ground Truth</th>
-        <th style="text-align: center;">MVSam3 vs Profusion</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">Ground Truth</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
         <th>Visualization</th>
@@ -703,8 +705,13 @@
     <tbody>
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.50.09%20PM.png" alt="Ground Truth" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/pro%201.png" alt="MV-SAM3 View 1" style="width:160px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.50.25%20PM.png" alt="MV-SAM3 View 2" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
         <td>
           <div class="metrics">
             <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
@@ -717,7 +724,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <img src="Object/WRCmvsam3_prescale_visualize.png" alt="WRCmvsam3 Pre-Scale Visualization" style="width:400px; height:auto;">
+          <img src="Code/JD/output/WRCmvsam3_prescale_visualize.png" alt="WRCmvsam3 Pre-Scale Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.45.39%20PM.png" alt="Step 1 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -732,8 +739,6 @@
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -746,7 +751,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <img src="Object/WRCmvsam3_rotation_seed_visualize.png" alt="WRCmvsam3 Rotation Seed Visualization" style="width:400px; height:auto;">
+          <img src="Code/JD/output/WRCmvsam3_rotation_seed_visualize.png" alt="WRCmvsam3 Rotation Seed Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.20%20PM.png" alt="Steps 2+3 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -761,8 +766,6 @@
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Multi-start Rigid ICP</span><br>
@@ -777,7 +780,7 @@
           CD = 1.2890 nm
         </td>
         <td>
-          <img src="Object/WRCmvsam3_ps_icp_diagnostics_visualize.png" alt="WRCmvsam3 ICP Diagnostics Visualization" style="width:400px; height:auto;">
+          <img src="Code/JD/output/WRCmvsam3_ps_icp_diagnostics_visualize.png" alt="WRCmvsam3 ICP Diagnostics Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.47.58%20PM.png" alt="Steps 4+5 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -794,6 +797,7 @@
   </table>
   </div>
 
+
   <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
   <div class="caption"><strong>Table 12:</strong> Three-stage alignment results (CasB_E-mvsam3).</div>
@@ -803,8 +807,8 @@
     <thead>
       <tr>
         <th>Step</th>
-        <th style="text-align: center;">Ground Truth</th>
-        <th style="text-align: center;">MVSam3 vs Profusion</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">Ground Truth</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
         <th>Visualization</th>
@@ -816,8 +820,13 @@
     <tbody>
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.53.22%20PM.png" alt="Ground Truth" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/pro%202.png" alt="MV-SAM3 View 1" style="width:160px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.53.36%20PM.png" alt="MV-SAM3 View 2" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
         <td>
           <div class="metrics">
             <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
@@ -845,8 +854,6 @@
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -874,8 +881,6 @@
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Multi-start Sim(3) ICP</span><br>
@@ -909,6 +914,7 @@
   </table>
   </div>
 
+
   <p style="font-weight: bold; font-size: 22pt; color: #c0392b; margin-top: 40px; margin-bottom: 10px;">Modified</p>
 
   <div class="caption"><strong>Table 13:</strong> Three-stage alignment results (EIN-HPr-mvsam3).</div>
@@ -918,8 +924,8 @@
     <thead>
       <tr>
         <th>Step</th>
-        <th style="text-align: center;">Ground Truth</th>
-        <th style="text-align: center;">MVSam3 vs Profusion</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">Ground Truth</th>
+        <th style="text-align: center; width: 180px; max-width: 180px;">MVSam3 vs Profusion</th>
         <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
         <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
         <th>Visualization</th>
@@ -931,8 +937,13 @@
     <tbody>
       <tr>
         <td>Step 1:<br>Pre-Scale</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.54.03%20PM.png" alt="Ground Truth" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
+        <td style="text-align: center; vertical-align: middle;" rowspan="3">
+          <img src="Object/png/actual/pro%203.png" alt="MV-SAM3 View 1" style="width:160px; height:auto; display:block; margin:0 auto 8px;">
+          <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.54.37%20PM.png" alt="MV-SAM3 View 2" style="width:160px; height:auto; display:block; margin:0 auto;">
+        </td>
         <td>
           <div class="metrics">
             <span class="label">Rotation-invariant Pre-Scale (RMS radius)</span><br>
@@ -960,8 +971,6 @@
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Best Rotation Seed Applied</span><br>
@@ -974,7 +983,7 @@
           CD = 0.2987 nm
         </td>
         <td style="text-align: center;">
-          <img src="Object/EIN-HPr_rotation_seed_visualize.png" alt="EIN-HPr Rotation Seed Visualization" style="width:400px; height:auto;">
+          <img src="Object/EIN-HPr_prescaled_rotation_seed_visualize.png" alt="EIN-HPr Rotation Seed Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.05.16%20PM.png" alt="Steps 2+3 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
@@ -989,8 +998,6 @@
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
-        <td style="text-align: center;"></td>
-        <td style="text-align: center;"></td>
         <td>
           <div class="metrics">
             <span class="label">Multi-start Sim(3) ICP</span><br>
@@ -1007,7 +1014,7 @@
           CD = 0.2987 nm
         </td>
         <td style="text-align: center;">
-          <img src="Object/EIN-HPr_icp_diagnostics_visualize.png" alt="EIN-HPr ICP Diagnostics Visualization" style="width:400px; height:auto;">
+          <img src="Object/EIN-HPr_prescaled_icp_diagnostics_visualize.png" alt="EIN-HPr ICP Diagnostics Visualization" style="width:400px; height:auto;">
         </td>
         <td style="text-align: center;">
           <img src="Object/png/actual/Screenshot%202026-07-09%20at%2012.06.05%20PM.png" alt="Steps 4+5 Side View 1" style="width:400px; height:auto; display:block; margin:0 auto 8px;">
