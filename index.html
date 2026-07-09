@@ -800,10 +800,15 @@
   <table>
     <thead>
       <tr>
-        <th>Step</th>
-        <th style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
-        <th style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
-        <th>Visualization</th>
+        <th rowspan="2">Step</th>
+        <th rowspan="2" style="color: #c0392b; font-weight: bold; font-size: 15pt;">Description &amp; Metrics</th>
+        <th rowspan="2" style="color: #2980b9; font-weight: bold; font-size: 15pt; width: 130px;">ProFusion</th>
+        <th colspan="3" style="text-align: center;">Visualization</th>
+      </tr>
+      <tr>
+        <th style="text-align: center;">Side View</th>
+        <th style="text-align: center;">Bottom View</th>
+        <th style="text-align: center;">Top View</th>
       </tr>
     </thead>
     <tbody>
@@ -820,9 +825,11 @@
         <td style="text-align: center; vertical-align: middle; color: #2980b9; font-weight: bold; width: 130px; white-space: nowrap;">
           CD = 0.2987 nm
         </td>
-        <td>
+        <td style="text-align: center;">
           <img src="Object/EIN-HPr_prescale_visualize.png" alt="EIN-HPr Pre-Scale Visualization">
         </td>
+        <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
       </tr>
       <tr>
         <td>Steps 2+3:<br>Rotation Seed</td>
@@ -835,9 +842,11 @@
           </div>
         </td>
         <td style="width: 130px;"></td>
-        <td>
+        <td style="text-align: center;">
           <img src="Object/EIN-HPr_rotation_seed_visualize.png" alt="EIN-HPr Rotation Seed Visualization">
         </td>
+        <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
       </tr>
       <tr>
         <td>Steps 4+5:<br>ICP Refinement</td>
@@ -854,9 +863,11 @@
           </div>
         </td>
         <td style="width: 130px;"></td>
-        <td>
+        <td style="text-align: center;">
           <img src="Object/EIN-HPr_icp_diagnostics_visualize.png" alt="EIN-HPr ICP Diagnostics Visualization">
         </td>
+        <td style="text-align: center;"></td>
+        <td style="text-align: center;"></td>
       </tr>
     </tbody>
   </table>
